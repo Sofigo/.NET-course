@@ -34,11 +34,9 @@
             this.Message = new System.Windows.Forms.Label();
             this.textTitle = new System.Windows.Forms.TextBox();
             this.textMessage = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.logout = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.Logout = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ADD
@@ -94,58 +92,36 @@
             this.textMessage.Size = new System.Drawing.Size(138, 58);
             this.textMessage.TabIndex = 5;
             // 
-            // tabControl1
+            // Logout
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(420, 23);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(200, 100);
-            this.tabControl1.TabIndex = 7;
+            this.Logout.Location = new System.Drawing.Point(51, 227);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(75, 23);
+            this.Logout.TabIndex = 8;
+            this.Logout.Text = "LogOut";
+            this.Logout.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // dataGridView1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(192, 74);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(375, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 227);
+            this.dataGridView1.TabIndex = 9;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // logout
-            // 
-            this.logout.Location = new System.Drawing.Point(51, 227);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(75, 23);
-            this.logout.TabIndex = 8;
-            this.logout.Text = "LogOut";
-            this.logout.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // FormNotes
             // 
             this.ClientSize = new System.Drawing.Size(673, 278);
-            this.Controls.Add(this.logout);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.textMessage);
             this.Controls.Add(this.textTitle);
             this.Controls.Add(this.Message);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.DELETE);
             this.Controls.Add(this.ADD);
-            this.Name = "Form1";
-            this.tabControl1.ResumeLayout(false);
+            this.Name = "FormNotes";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,10 +136,8 @@
         private System.Windows.Forms.Label Message;
         private System.Windows.Forms.TextBox textTitle;
         private System.Windows.Forms.TextBox textMessage;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button logout;
+        private System.Windows.Forms.Button Logout;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

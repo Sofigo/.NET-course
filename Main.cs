@@ -17,7 +17,7 @@ namespace Notes
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLog());
-            Application.Run(new FormNotes());
+            //Application.Run(new FormNotes());
         }
     }
    
