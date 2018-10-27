@@ -1,0 +1,11 @@
+D:\Notes\Notes\bin\Debug\Notes.exe.config
+D:\Notes\Notes\bin\Debug\Notes.exe
+D:\Notes\Notes\bin\Debug\Notes.pdb
+D:\Notes\Notes\obj\Debug\Notes.csprojAssemblyReference.cache
+D:\Notes\Notes\obj\Debug\Notes.Form1.resources
+D:\Notes\Notes\obj\Debug\Notes.Properties.Resources.resources
+D:\Notes\Notes\obj\Debug\Notes.csproj.GenerateResource.cache
+D:\Notes\Notes\obj\Debug\Notes.csproj.CoreCompileInputs.cache
+D:\Notes\Notes\obj\Debug\Notes.exe
+D:\Notes\Notes\obj\Debug\Notes.pdb
+D:\Notes\Notes\obj\Debug\Notes.Form2.resources
