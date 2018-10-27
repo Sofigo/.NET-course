@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ADD = new System.Windows.Forms.Button();
             this.DELETE = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
@@ -36,7 +37,17 @@
             this.textMessage = new System.Windows.Forms.TextBox();
             this.Logout = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.database2DataSet = new Notes.Database2DataSet();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter = new Notes.Database2DataSetTableAdapters.TableTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataModifiedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ADD
@@ -103,11 +114,63 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(375, 23);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.textDataGridViewTextBoxColumn,
+            this.dataCreatedDataGridViewTextBoxColumn,
+            this.dataModifiedDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(357, 23);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 227);
+            this.dataGridView1.Size = new System.Drawing.Size(291, 227);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // database2DataSet
+            // 
+            this.database2DataSet.DataSetName = "Database2DataSet";
+            this.database2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.database2DataSet;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            // 
+            // textDataGridViewTextBoxColumn
+            // 
+            this.textDataGridViewTextBoxColumn.DataPropertyName = "text";
+            this.textDataGridViewTextBoxColumn.HeaderText = "text";
+            this.textDataGridViewTextBoxColumn.Name = "textDataGridViewTextBoxColumn";
+            // 
+            // dataCreatedDataGridViewTextBoxColumn
+            // 
+            this.dataCreatedDataGridViewTextBoxColumn.DataPropertyName = "data created";
+            this.dataCreatedDataGridViewTextBoxColumn.HeaderText = "data created";
+            this.dataCreatedDataGridViewTextBoxColumn.Name = "dataCreatedDataGridViewTextBoxColumn";
+            // 
+            // dataModifiedDataGridViewTextBoxColumn
+            // 
+            this.dataModifiedDataGridViewTextBoxColumn.DataPropertyName = "data modified";
+            this.dataModifiedDataGridViewTextBoxColumn.HeaderText = "data modified";
+            this.dataModifiedDataGridViewTextBoxColumn.Name = "dataModifiedDataGridViewTextBoxColumn";
             // 
             // FormNotes
             // 
@@ -121,7 +184,10 @@
             this.Controls.Add(this.DELETE);
             this.Controls.Add(this.ADD);
             this.Name = "FormNotes";
+            this.Load += new System.EventHandler(this.FormNotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +204,14 @@
         private System.Windows.Forms.TextBox textMessage;
         private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Database2DataSet database2DataSet;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private Database2DataSetTableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCreatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataModifiedDataGridViewTextBoxColumn;
     }
 }
 

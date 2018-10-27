@@ -63,5 +63,12 @@ namespace Notes
             FormLog dd = new FormLog();
             dd.Show();
         }
+
+        private void FormNotes_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "database2DataSet.Table". При необходимости она может быть перемещена или удалена.
+            this.tableTableAdapter.Fill(this.database2DataSet.Table);
+
+        }
     }
 }
