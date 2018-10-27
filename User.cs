@@ -16,8 +16,12 @@ namespace Notes
 
         #region Fields
         private Guid _guid;
+        private string _name;
+        private string _surname;
         private string _userName;
+        private string _email;
         private string _password;
+        private DateTime _lastLoginDateTime;
         private List<Note> _notes;
         #endregion
         #region Properties 
@@ -32,6 +36,28 @@ namespace Notes
                 _guid = value;
             }
         }
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+        public string SurName
+        {
+            get
+            {
+                return _surname;
+            }
+            set
+            {
+                _surname = value;
+            }
+        }
         public string UserName
         {
             get
@@ -41,6 +67,28 @@ namespace Notes
             set
             {
                 _userName = value;
+            }
+        }
+        public string Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                _email = value;
+            }
+        }
+        public DateTime LastLoginDatetime
+        {
+            get
+            {
+                return _lastLoginDateTime;
+            }
+            set
+            {
+                _lastLoginDateTim = value;
             }
         }
         public string Password
@@ -56,10 +104,13 @@ namespace Notes
         #endregion
         #region Constructor
 
-        public User(string userName, string password) : this()
+        public User(string Name, string Surname, string userName, string Email, string password) : this()
         {
             _guid = Guid.NewGuid();
+            _name = Name;
+            _surname = Surname;
             _userName = UserName;
+            _lastLoginDateTime = DateTime.Now;
 
             SetPassword(password);
         }
